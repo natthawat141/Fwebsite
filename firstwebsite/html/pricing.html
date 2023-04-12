@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+<style>
+  body{
+    background-image: url("back.jpg"); /* กำหนดรูปภาพพื้นหลัง */
+  background-repeat: no-repeat; /* ไม่ต้องการให้รูปภาพเกิดการเก็บ */
+  background-position: center center; /* กำหนดตำแหน่งรูปภาพให้อยู่กลางแนวตั้งและนอน */
+  background-attachment: fixed; /* กำหนดให้รูปภาพไม่เคลื่อนไหวขณะที่เลื่อนหน้าจอ */
+  background-size: cover; /* กำหนดให้รูปภาพปรับขนาดตามขนาดของหน้าจอ */
+ 
+}
+
+.superbox{
+  margin: 70px;
+  width: 100%;
+  height:  100%;
+}
+.box{
+  padding: 100px;
+  background-color: #f9f9f9cf;
+  max-width: 90;
+  margin: 100px;
+  border-radius: 15px;
+}
+.back{
+  background-color: rgba(255, 255, 255, 0.94);
+  border-radius: 20px;
+  margin: 10px;
+}
+  .backf{
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin-top: auto;
+  }
+  .banner {
+text-align: center;
+margin: 15px;
+box-shadow: 3px 2px 5px 4px rgba(255, 255, 255, 0.29);
+  }
+
+label {
+  display: inline-block; /* จัดเรียงแบบนอน */
+  width: 80px;
+  text-align: right; /* จัดตำแหน่งข้อความอยู่ทางขวา */
+  margin-right: 10px; /* กำหนดระยะห่างของ label กับ element ที่ตามหลัง */
+}
+
+
+input {
+  padding: 5px; 
+  margin-bottom: 10px; 
+}
+
+/* style ของ checkbox และ radio button */
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 5px; /* กำหนดระยะห่างของ checkbox หรือ radio button กับ element ที่ตามหลัง */
+}
+
+/* style ของ button */
+
+
+button
+{
+    position: relative;
+    font-size:  30px;
+    letter-spacing: 1px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px Linear-gradient(transparent,rgba(78, 25, 131, 0.533))
+    ;
+    line-height:0.70em;
+    outline: none;
+    animation: animate 5s Linear infinite;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: #02135f;
+    transition: 0.5s;
+    color: #fff;
+        box-shadow: 0 0 10px #06109f,
+        0 0 20px #1f2fbe,
+        
+}
+button:hover{
+    background: #2e21c0;
+    cursor: pointer;
+    box-shadow: 0 0 5px  #0033ff;
+    box-shadow: 0 0 20px #0033ff;
+    box-shadow: 0 0 40px  #0033ff;
+    box-shadow: 0 0 140px  #0033ff;
+}
+
+
+</style>
+  <title>nattawat</title>
+  
+</head>
+<body>
+ <div class="back">
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">gallery</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link">From</a></li>
+        <li class="nav-item"><a href="FAQs.html" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="abount.html" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+</div>
+
+<div class="banner">
+  <img src="/banner/1.png"width="auto" height="400">
+
+</div>
+
+
+
+
+  <script src="/js/bootstrap.min.js"></script>
+
+  <div class="supperbox">
+
+    <div class="box">
+    
+  <form action="https://httpbin.org/get">
+    <!--action=ส่งข่อมูลไปยังhttps://httpbin.org/get-->
+    <p>
+        <label for="input-fullname">ชื่อ</label>
+        <!--lable จัดตำแหน่ง-->
+        <input id="input-fullname" type="text" placeholder="ชื่อจริง" name="input-fullname">
+        <!--placehoderบอกให้ใส้ข้อมูลในช่องกรอก-->
+        <!--กำหมดค่าinputให้เป็นfullname-->
+        <!--typetextเป็นชนิดของinput-->
+        <label for="input-lastname">นามสกุล</label>
+
+        <input id="input-lastname" type="text" placeholder="นามสกุล" name="lastname">
+    </p>
+    <label for="input-email">อีเมล</label>
+    <input for="input-email" type="email" placeholder="email" name="email">
+    <br>
+    <label for="birthday">วันเกิด</label>
+    <input type="date" id="birthday" name="brithday" onchange="selectBirthday()">
+    <div id="result"></div>
+
+    <label for="gender">เพศ : </label>
+    <input type="radio" name="gender" value="female">ชาย
+    <input type="radio" name="gender" value="male">หญิง
+    
+    <h3>ความพึงพอใจ6ระดับจากมากไปน้อย</h3>
+    <br>
+    <p>เรียงจากมากไปน้อยโดย6มีค่ามากสุด</p>
+    <input type="checkbox" name="1" value="v1">ระดับ1
+    <input type="checkbox" name="2" value="v2">ระดับ2
+    <input type="checkbox" name="3" value="v3">ระดับ3
+    <br>
+    <input type="checkbox" name="4" value="v4">ระดับ4
+    <input type="checkbox" name="5" value="v5">ระดับ5
+    <input type="checkbox" name="6" value="v6">ระดับ6
+    <br>
+    <label for="ข้อเสนอ">ข้อเสนอแนะ</label>
+    <input type="text">
+    <br>
+    <P>
+        <button type="submit">ส่งข้อมูล</button>
+    </P>
+
+</form>
+<hr>
+</div>
+</div>
+
+
+<div class="backf">
+        <div class="container">
+          <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+              <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+              <li class="nav-item"><a href="gallery.html" class="nav-link px-2 text-muted">gallery</a></li>
+              <li class="nav-item"><a href="pricing.html" class="nav-link px-2 text-muted">From</a></li>
+              <li class="nav-item"><a href="FAQs.html" class="nav-link px-2 text-muted">FAQs</a></li>
+              <li class="nav-item"><a href="abount.html" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2022 Company, Inc</p>
+          </footer>
+        </div>
+      </div>
+    
+    
+      
+</html>
+</body>

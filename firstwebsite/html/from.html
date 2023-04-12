@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="https://httpbin.org/get">
+        <!--action=ส่งข่อมูลไปยังhttps://httpbin.org/get-->
+        <p>
+            <label for="input-fullname">ชื่อ</label>
+            <!--lable จัดตำแหน่ง-->
+            <input id="input-fullname" type="text" placeholder="ชื่อจริง" name="input-fullname">
+            <!--placehoderบอกให้ใส้ข้อมูลในช่องกรอก-->
+            <!--กำหมดค่าinputให้เป็นfullname-->
+            <!--typetextเป็นชนิดของinput-->
+            <label for="input-lastname">นามสกุล</label>
+
+            <input id="input-lastname" type="text" placeholder="นามสกุล" name="lastname">
+        </p>
+        <label for="input-email">อีเมล</label>
+        <input for="input-email" type="email" placeholder="email" name="email">
+        <br>
+        <label for="birthday">วันเกิด</label>
+        <input type="date" id="birthday" name="brithday" onchange="selectBirthday()">
+        <div id="result"></div>
+
+        <label for="gender">เพศ : </label>
+        <input type="radio" name="gender" value="female">ชาย
+        <input type="radio" name="gender" value="male">หญิง
+        <br>
+        <h3>ความพึงพอใจ6ระดับจากมากไปน้อย</h3>
+        <input type="checkbox" name="1" value="v1">ระดับ1
+        <input type="checkbox" name="2" value="v2">ระดับ2
+        <input type="checkbox" name="3" value="v3">ระดับ3
+        <br>
+        <input type="checkbox" name="4" value="v4">ระดับ4
+        <input type="checkbox" name="5" value="v5">ระดับ5
+        <input type="checkbox" name="6" value="v6">ระดับ6
+        
+        <br>
+        <P>
+            <button type="submit">ส่งข้อมูล</button>
+        </P>
+
+    </form>
+    <hr>
+</body>
+
+</html>
+<!--https://httpbin.org/post-->
+<!--https://httpbin.org/get-->
